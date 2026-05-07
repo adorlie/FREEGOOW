@@ -1,22 +1,31 @@
-// Fungsi untuk mengirim pesan otomatis ke WhatsApp saat tombol produk diklik
+// Fungsi Kirim Pesan ke WhatsApp
 function pesanProduk(namaProduk) {
     const nomorWA = "6283128891612";
-    const pesan = `Halo FREEGOOW, saya ingin memesan produk: ${namaProduk}. \n\nTerima kasih sudah checkout! 🛒 Semoga kamu puas dengan hasilnya. Satu langkah lebih dekat menuju tampilan digital yang lebih profesional. Happy growing! 📈💫`;
+    const closingQuote = "Terima kasih sudah checkout! 🛒 Semoga kamu puas dengan hasilnya. Satu langkah lebih dekat menuju tampilan digital yang lebih profesional. Happy growing! 📈💫";
     
-    // Encode pesan untuk URL
+    const pesan = `Halo FREEGOOW, saya mau pesan *${namaProduk}* dong! ✨\n\n${closingQuote}`;
+    
     const urlWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
-    
-    // Buka WhatsApp di tab baru
     window.open(urlWA, '_blank');
 }
 
-// Tambahan: Smooth scroll untuk link navigasi (opsional karena CSS sudah menangani)
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const section = document.querySelector(this.getAttribute('href'));
-        section.scrollIntoView({
-            behavior: 'smooth'
-        });
+// Efek Muncul Saat Scroll (Scroll Reveal)
+window.addEventListener('scroll', () => {
+    const cards = document.querySelectorAll('.card');
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }
     });
+});
+
+// Inisialisasi style awal untuk animasi scroll
+document.querySelectorAll('.card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(50px)';
+    card.style.transition = 'all 0.6s ease-out';
 });
