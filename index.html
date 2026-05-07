@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FREEGOOW | Digital Business Profile</title>
+    <title>FREEGOOW | Digital Creative</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk icon lucu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigasi -->
     <nav>
-        <div class="logo">FREEGOOW</div>
+        <div class="logo">FREEGOOW<span>.</span></div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -24,26 +26,38 @@
     <!-- Halaman 1: Home -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>FREEGOOW</h1>
-            <p>Solusi Transformasi Digital Masa Kini</p>
-            <a href="#about" class="btn">Pelajari Lebih Lanjut</a>
+            <div class="hero-image">
+                <!-- Gambar ilustrasi digital yang lucu -->
+                <img src="https://illustrations.popsy.co/purple/launching-soon.svg" alt="Digital Business" class="floating">
+            </div>
+            <h1 class="bounce-in">FREEGOOW</h1>
+            <p>Sahabat UMKM untuk Go Digital! ✨</p>
+            <a href="#about" class="btn-main">Mulai Jelajah 🚀</a>
+        </div>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V46.35C50.7,56,113,63.57,175,64.44c76.75,1.08,124.64-16.12,146.39-7.99Z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
     <!-- Halaman 2: About -->
     <section id="about">
         <div class="container">
-            <h2>Tentang Kami</h2>
+            <h2 class="section-title">Kenalan Yuk! 👋</h2>
             <div class="about-grid">
-                <div class="about-item">
+                <div class="card about-card">
+                    <div class="icon-circle"><i class="fas fa-lightbulb"></i></div>
                     <h3>Latar Belakang</h3>
                     <p>Hadir sebagai jembatan inovasi, platform ini dibangun khusus untuk memberdayakan UMKM agar mampu menembus batas-batas fisik dan berkembang pesat di ekosistem digital yang dinamis.</p>
                 </div>
-                <div class="about-item">
+                <div class="card about-card">
+                    <div class="icon-circle"><i class="fas fa-rocket"></i></div>
                     <h3>Visi</h3>
                     <p>Menjadi mitra strategis terpercaya yang menghadirkan solusi digital inovatif untuk mengakselerasi pertumbuhan bisnis di era transformasi global.</p>
                 </div>
-                <div class="about-item">
+                <div class="card about-card">
+                    <div class="icon-circle"><i class="fas fa-star"></i></div>
                     <h3>Misi</h3>
                     <p>Menciptakan solusi kreatif yang tidak hanya menjawab tantangan hari ini, tetapi juga siap menghadapi perkembangan tren teknologi di masa depan.</p>
                 </div>
@@ -54,31 +68,34 @@
     <!-- Halaman 3: Produk -->
     <section id="produk">
         <div class="container">
-            <h2>Produk Unggulan</h2>
+            <h2 class="section-title">Karya Kami 🎨</h2>
             <div class="product-grid">
-                <!-- Produk 1 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Poster+Design" alt="Poster">
-                    <h3>Poster Digital</h3>
-                    <p>Desain poster profesional untuk promosi event atau produk Anda agar tampil lebih menarik.</p>
-                    <p class="price">Rp 50.000</p>
-                    <button onclick="pesanProduk('Poster Digital')">Pesan Sekarang</button>
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?auto=format&fit=crop&w=400&q=80" alt="Poster">
+                    <div class="p-info">
+                        <h3>Poster Digital</h3>
+                        <p>Desain poster estetik untuk promosi media sosial.</p>
+                        <span class="priceTag">Rp 50.000</span>
+                        <button onclick="pesanProduk('Poster Digital')">Pilih Ini <i class="fas fa-heart"></i></button>
+                    </div>
                 </div>
-                <!-- Produk 2 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Infographic+Design" alt="Infografis">
-                    <h3>Infografis</h3>
-                    <p>Penyajian data dan informasi yang rumit menjadi visual yang mudah dipahami dan estetik.</p>
-                    <p class="price">Rp 100.000</p>
-                    <button onclick="pesanProduk('Infografis')">Pesan Sekarang</button>
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="Infografis">
+                    <div class="p-info">
+                        <h3>Infografis</h3>
+                        <p>Ubah data rumit jadi visual yang super gemoy.</p>
+                        <span class="priceTag">Rp 100.000</span>
+                        <button onclick="pesanProduk('Infografis')">Pilih Ini <i class="fas fa-heart"></i></button>
+                    </div>
                 </div>
-                <!-- Produk 3 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Sticker+Design" alt="Stiker">
-                    <h3>Stiker Custom</h3>
-                    <p>Branding identitas bisnis Anda melalui desain stiker kreatif untuk media sosial atau cetak.</p>
-                    <p class="price">Rp 25.000</p>
-                    <button onclick="pesanProduk('Stiker Custom')">Pesan Sekarang</button>
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1572375927902-1c09367552d4?auto=format&fit=crop&w=400&q=80" alt="Stiker">
+                    <div class="p-info">
+                        <h3>Gambar Stiker</h3>
+                        <p>Stiker lucu untuk branding yang makin diingat.</p>
+                        <span class="priceTag">Rp 25.000</span>
+                        <button onclick="pesanProduk('Stiker Custom')">Pilih Ini <i class="fas fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,11 +104,13 @@
     <!-- Halaman 4: Kontak -->
     <section id="kontak">
         <div class="container">
-            <h2>Hubungi Kami</h2>
-            <div class="contact-box">
-                <p>Siap untuk meningkatkan level bisnis Anda?</p>
-                <a href="https://wa.me/6283128891612?text=Halo%20FREEGOOW,%20saya%20tertarik%20dengan%20layanan%20Anda." target="_blank" class="wa-btn">Chat via WhatsApp</a>
-                <div class="thanks-note">
+            <div class="contact-card">
+                <h2>Siap Kerja Sama? 🤝</h2>
+                <p>Klik tombol di bawah untuk ngobrol langsung via WhatsApp!</p>
+                <a href="https://wa.me/6283128891612" target="_blank" class="btn-wa pulse">
+                    <i class="fab fa-whatsapp"></i> Chat Admin Japri
+                </a>
+                <div class="final-msg">
                     <p>"Terima kasih sudah checkout! 🛒 Semoga kamu puas dengan hasilnya. Satu langkah lebih dekat menuju tampilan digital yang lebih profesional. Happy growing! 📈💫"</p>
                 </div>
             </div>
@@ -99,9 +118,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 FREEGOOW Digital Service. All rights reserved.</p>
+        <p>Made with ❤️ by FREEGOOW Digital</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+</html>*
